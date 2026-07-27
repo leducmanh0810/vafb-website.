@@ -1,0 +1,93 @@
+VAFB — Danh sách ảnh & tài nguyên thư mục /images (67 Mục)
+====================================================
+
+CHUNG & BANNERS TRANG (Mục 1 - 10)
+----------------------------------
+1. logo.png               → Logo VAFB nền trong suốt
+2. hero-banner.jpg        → https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1920&auto=format&fit=crop (Thảm đỏ / Sân khấu Runway)
+3. hero-video-fashion.mp4 → https://assets.mixkit.co/videos/preview/mixkit-fashion-model-in-a-gold-dress-41548-large.mp4 (Video catwalk đầm lụa)
+4. about-hero-banner.jpg  → https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop (Môi trường văn phòng cao cấp)
+5. service-hero-banner.jpg→ https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop (Không gian tư vấn hội đồng VAFB)
+6. contact-hero-banner.jpg→ https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1920&auto=format&fit=crop (Bắt tay hợp tác giữa các giám đốc)
+7. contact-meeting.jpg    → https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop (Cuộc họp offline phòng ban)
+8. user-avatar-default.jpg→ https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop (Avatar người dùng / doanh nghiệp)
+9. sao.png                → Họa tiết ngôi sao hiệu ứng nền
+10. sóng.png              → Họa tiết đường sóng hiệu ứng dốc
+
+HIỆU ỨNG NỀN & ICON MẠNG XÃ HỘI (Mục 11 - 15)
+---------------------------------------------
+11. chảy.png              → Họa tiết hiệu ứng chảy wave-up
+12. vụn.png               → Họa tiết hiệu ứng mảnh vụn shards
+13. social-facebook.png   → Biểu tượng Facebook
+14. social-tiktok.png     → Biểu tượng TikTok
+15. social-linkedin.png   → Biểu tượng LinkedIn
+
+TRANG CHỦ — POSTER GALLERY (Mục 16 - 27)
+---------------------------------------
+16. gallery-1.jpg  → https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop (Apparel - Đầm Cam Đất)
+17. gallery-2.jpg  → https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop (Cosmetics - Serum Nude)
+18. gallery-3.jpg  → https://images.unsplash.com/photo-1583241800698-e8ab01c85b27?q=80&w=800&auto=format&fit=crop (Luxury Perfume - Nước hoa Hổ Phách)
+19. gallery-4.jpg  → https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop (Editorial - Đỏ Rượu Trầm)
+20. gallery-5.jpg  → https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=800&auto=format&fit=crop (Son môi Terracotta Red)
+21. gallery-6.jpg  → https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=800&auto=format&fit=crop (Chân dung Haute Couture)
+22. gallery-7.jpg  → https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop (Model Makeup tone Cam Đất)
+23. gallery-8.jpg  → https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop (Catwalk ánh sáng vàng)
+24. gallery-9.jpg  → https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop (Nước hoa thủy tinh hổ phách)
+25. gallery-10.jpg → https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=800&auto=format&fit=crop (Bảng phấn mắt / Mỹ phẩm)
+26. gallery-11.jpg → https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop (Không gian Runway Châu Âu)
+27. gallery-12.jpg → https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop (Trang phục Lụa & Trang sức)
+
+THẺ DỊCH VỤ — INDEX & PRODUCTS (Mục 28 - 36)
+--------------------------------------------
+28. service-accord.jpg    → https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop (Ký kết Accord)
+29. service-directory.jpg → https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop (Mạng lưới B2B Directory)
+30. service-report.jpg    → https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop (Báo cáo Volume 0)
+31. service-advisory.jpg  → https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop (Tư vấn Firewall)
+32. service-council.jpg   → https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800&auto=format&fit=crop (Hội đồng Đại diện)
+33. service-matching.jpg  → https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop (Phiên đàm phán B2B)
+34. service-study.jpg     → https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop (Nghiên cứu Xu hướng)
+35. service-branding.jpg  → https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop (Định vị Brand Cosmetic)
+36. service-showcase.jpg  → https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop (Nền tảng Showcase Thường niên)
+
+MASCOTS & TRANG TRÍ HERO (Mục 37 - 40)
+---------------------------------------
+37. mascot-1.png → https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=200&auto=format&fit=crop (Biểu tượng Mỹ phẩm Nude)
+38. mascot-2.png → https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=200&auto=format&fit=crop (Biểu tượng Nước hoa Hổ phách)
+39. mascot-3.png → https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=200&auto=format&fit=crop (Biểu tượng Thời trang Lụa)
+40. mascot-4.png → https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=200&auto=format&fit=crop (Biểu tượng Son môi Terracotta)
+
+TRANG CHI TIẾT DỊCH VỤ — PRODUCT DETAIL (Mục 41 - 50)
+------------------------------------------------------
+41. detail-standard.jpg      → https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop (Gói Standard)
+42. detail-professional.jpg  → https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop (Gói Professional)
+43. detail-enterprise.jpg    → https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop (Gói Enterprise)
+44. detail-international.jpg → https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop (Gói International)
+45. detail-accord-banner.jpg → https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop (Detail Accord)
+46. detail-council-banner.jpg→ https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800&auto=format&fit=crop (Detail Council)
+47. detail-directory-banner.jpg→https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop (Detail Directory)
+48. detail-report-banner.jpg → https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop (Detail Report Volume 0)
+49. detail-advisory-banner.jpg→https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop (Detail Advisory)
+50. detail-showcase-banner.jpg→https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop (Detail Showcase)
+
+TRANG GIỚI THIỆU — STORY / ABOUT (Mục 51 - 60)
+----------------------------------------------
+51. about-main.jpg  → https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=800&auto=format&fit=crop (Ảnh lớn minh họa VAFB)
+52. process-1.jpg   → https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop (Tài sản dùng chung)
+53. process-2.jpg   → https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop (Firewall tư vấn)
+54. process-3.jpg   → https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop (Showcase thường niên)
+55. process-4.jpg   → https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800&auto=format&fit=crop (Hạ tầng thể chế)
+56. about-vision.jpg→ https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop (Tầm nhìn thời trang)
+57. about-beauty.jpg→ https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop (Tầm nhìn mỹ phẩm)
+58. about-sdg8.jpg  → https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop (Minh họa UN SDG 8)
+59. about-sdg17.jpg → https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop (Minh họa UN SDG 17)
+60. about-office.jpg→ https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop (Không gian văn phòng)
+
+ẢNH PHỤ TRỢ MỞ RỘNG (Mục 61 - 67)
+----------------------------------
+61. bg-feather-light.png → Hình phủ ánh sáng mờ feather
+62. bg-mesh-glow.png     → Hình phủ lưới ánh sáng công nghệ
+63. fashion-brand-1.jpg  → Logo thương hiệu thời trang thành viên
+64. fashion-brand-2.jpg  → Logo thương hiệu thời trang thành viên
+65. cosmetic-brand-1.jpg → Logo thương hiệu mỹ phẩm thành viên
+66. cosmetic-brand-2.jpg → Logo thương hiệu mỹ phẩm thành viên
+67. vafb-certificate.png → Chứng nhận thành viên VAFB

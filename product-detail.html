@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAFB – Service Detail</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo" style="display:flex; align-items:center; gap:14px;">
+    <svg class="vafb-logo-svg" viewBox="0 0 280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(5, 5)">
+        <path d="M 8 10 L 22 42 L 36 10" stroke="#CBA258" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 14 36 L 28 8 L 42 36" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="18" y1="26" x2="36" y2="26" stroke="#CBA258" stroke-width="2"/>
+        <circle cx="22" cy="25" r="23" stroke="#CBA258" stroke-width="1" stroke-dasharray="2 2"/>
+      </g>
+      <text x="62" y="33" font-family="'Times New Roman', 'Playfair Display', serif" font-weight="700" font-size="28" fill="#FFFFFF" letter-spacing="4">VAFB</text>
+      <text x="63" y="46" font-family="'Montserrat', sans-serif" font-weight="600" font-size="8.5" fill="#CBA258" letter-spacing="2">VIETNAM FASHION &amp; BEAUTY</text>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <a href="story.html">About VAFB</a>
+    <a href="products.html" class="active">Services</a>
+    <a href="contact.html">Contact</a>
+
+    <div class="nav-user-badge" id="navUserBadge" style="display:none;" onclick="location.href='contact.html'">
+      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="User Profile" class="nav-avatar-img">
+      <span class="nav-user-name" id="navUserName">Enterprise</span>
+    </div>
+
+    <button class="burger" id="burgerBtn" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <a href="story.html">About VAFB</a>
+  <a href="products.html">Services</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="detail-page has-stars">
+  <div class="detail-inner ctr">
+    <div class="dbcrumb">
+      <a href="index.html">🏠</a> <span>/</span>
+      <a href="products.html">Services</a> <span>/</span>
+      <span id="bcName">Service Detail</span>
+    </div>
+    <div class="detail-grid">
+      <!-- GALLERY -->
+      <div class="gallery-wrap rv">
+        <div class="gmain">
+          <img id="galImg" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop" alt="Service Image">
+        </div>
+      </div>
+      <!-- INFO -->
+      <div class="rv d2">
+        <h1 class="dtitle" id="sTitle">Institutional Service</h1>
+        <p class="ddesc" id="sDesc">
+          VAFB provides neutral institutional frameworks, data intelligence, and verified B2B ecosystem connectivity to empower Vietnam's Fashion &amp; Beauty sector.
+        </p>
+        <div class="dprice" id="sPrice">Institutional Pricing Upon Request</div>
+        
+        <p class="flabel">Select Service Tier Scope</p>
+        <div class="flavor-row">
+          <button class="fp fc on" onclick="pickFlavorOnline(this,'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop')">Standard</button>
+          <button class="fp fs" onclick="pickFlavorOnline(this,'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop')">Professional</button>
+          <button class="fp fl2c" onclick="pickFlavorOnline(this,'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop')">Enterprise</button>
+          <button class="fp fb" onclick="pickFlavorOnline(this,'https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop')">International</button>
+        </div>
+        <div class="safety-box">
+          <h4>ℹ️ Institutional Guarantee Note</h4>
+          <p id="sNote">
+            All VAFB advisory and research activities strictly comply with governance principles and firewall protections, safeguarding confidential commercial data.
+          </p>
+        </div>
+        <button class="btn-primary" onclick="location.href='contact.html'">Inquire Now →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner ctr">
+    <div class="f-brand">
+      <div class="fbrand">VAFB — VIETNAM ASSOCIATION OF FASHION &amp; BEAUTY</div>
+      <div class="finfo">
+        <p>📍 Executive Office: Ho Chi Minh City, Vietnam</p>
+        <p>📞 (+84) 000-000-0000</p><p>✉️ contact@vafb.vn</p>
+      </div>
+    </div>
+    <nav class="fnav">
+      <a href="story.html">About VAFB</a><a href="products.html">Services</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="f-social">
+      <div class="fsoc-title">You can find VAFB at:</div>
+      <div class="sbtns">
+        <a href="https://facebook.com" target="_blank" class="sbtn"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> Facebook</a>
+        <a href="https://tiktok.com" target="_blank" class="sbtn"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-2.22V8.05a6.34 6.34 0 1 0 6.34 6.34V9.28a8.28 8.28 0 0 0 4.77 1.52V7.35a4.85 4.85 0 0 1-1-.66z"/></svg> TikTok</a>
+        <a href="https://linkedin.com" target="_blank" class="sbtn"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="fcopy">© VAFB, ALL RIGHTS RESERVED.</div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  function pickFlavorOnline(btn, url) {
+    document.querySelectorAll('.fp').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    document.getElementById('galImg').src = url;
+  }
+
+  const DETAIL_DATA = {
+    'accord': {
+      title: 'VAFB Accord — Institutional Code',
+      desc: 'The foundational governance code and ethical participating charter for Vietnam’s fashion and beauty enterprises. It establishes transparent B2B collaboration rules, intellectual property protection guidelines, and standardized dispute mediation procedures without intruding into member commercial operations.',
+      price: 'Participating Code Agreement',
+      img: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop',
+      note: 'Signing the Accord grants institutional endorsement and verified compliance credentials across all VAFB ecosystem channels.'
+    },
+    'council': {
+      title: 'Representative Council & Dispute Settlement',
+      desc: 'An independent oversight council comprising senior industry executives, legal experts, and trade consultants. The council provides neutral mediation for cross-sector commercial disputes, contract compliance auditing, and industry governance oversight.',
+      price: 'Oversight & Compliance Membership',
+      img: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800&auto=format&fit=crop',
+      note: 'All council proceedings are bound by strict non-disclosure agreements and institutional confidentiality codes.'
+    },
+    'directory': {
+      title: 'Live Pre-Vetted B2B Directory',
+      desc: 'A continuously updated digital ecosystem repository connecting verified fashion houses, OEM/ODM cosmetic manufacturers, raw ingredient suppliers, packaging developers, and retail distributors across Vietnam and Southeast Asia.',
+      price: 'Verified Access Tier',
+      img: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop',
+      note: 'Every listing undergoes rigorous pre-vetting including capacity audits, regulatory compliance checks, and business verification.'
+    },
+    'matching': {
+      title: 'B2B Matching Sessions',
+      desc: 'Bespoke, curated networking sessions connecting fashion brands with cosmetic producers for co-branding, joint product launches, and supply chain synergy. Includes structured negotiation tables and follow-up support.',
+      price: 'Facilitated Session Package',
+      img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop',
+      note: 'Sessions are customized according to target demographics, product price points, and strategic commercial goals.'
+    },
+    'report': {
+      title: 'Volume 0 Market Intelligence Report',
+      desc: 'VAFB’s flagship macro research report compiled exclusively from public data sources and market observation. Delivers deep insights into Vietnam consumer shifts, market size, regulatory updates, and cross-category growth opportunities.',
+      price: 'Independent Macro Data',
+      img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop',
+      note: 'Volume 0 never utilizes internal confidential data from member enterprises, ensuring complete objectivity and zero bias.'
+    },
+    'study': {
+      title: 'Specialized Sector Studies',
+      desc: 'Customized deep-dive market studies covering specific sub-sectors such as clean beauty formulations, sustainable textile supply chains, luxury fragrance trends, or Gen Z purchasing habits in Vietnam.',
+      price: 'Custom Research Brief',
+      img: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop',
+      note: 'Studies are tailored to specific enterprise requirements with primary data collection and expert interviews.'
+    },
+    'advisory': {
+      title: 'Corporate Strategic Advisory',
+      desc: 'Confidential corporate strategy consulting operating behind strict data firewalls completely separate from public research activities. Assisting enterprises in cross-category expansion, joint venture structuring, and M&A positioning.',
+      price: 'Firewalled Strategy Engagement',
+      img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop',
+      note: 'Operating behind a strict firewall guarantees that corporate data is never shared with competitors or market research teams.'
+    },
+    'branding': {
+      title: 'Brand Positioning Advisory',
+      desc: 'Bespoke brand identity and market repositioning advisory for local cosmetic and fashion brands aiming to elevate into the premium/luxury tier or enter regional international markets.',
+      price: 'Confidential Strategy Session',
+      img: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop',
+      note: 'Includes positioning analysis, visual identity auditing, and cross-category lifestyle alignment.'
+    },
+    'showcase': {
+      title: 'Annual Ecosystem Showcase',
+      desc: 'Vietnam’s premier cross-industry platform bringing together fashion brands, beauty enterprises, designers, manufacturers, media, and key opinion leaders (KOLs/KOCs) for runway presentations, product showcases, and B2B contract signings.',
+      price: 'Cross-Industry Platform',
+      img: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop',
+      note: 'Participating enterprises gain high-visibility media coverage, direct buyer matching, and consumer activation.'
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const p = new URLSearchParams(window.location.search);
+    const key = p.get('service') || 'report';
+    const d = DETAIL_DATA[key] || DETAIL_DATA['report'];
+
+    document.getElementById('bcName').textContent = d.title;
+    document.getElementById('sTitle').textContent = d.title;
+    document.getElementById('sDesc').textContent = d.desc;
+    document.getElementById('sPrice').textContent = d.price;
+    document.getElementById('sNote').textContent = d.note;
+    document.getElementById('galImg').src = d.img;
+  });
+</script>
+</body>
+</html>
