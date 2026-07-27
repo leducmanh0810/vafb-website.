@@ -102,13 +102,15 @@
   </div>
 </div>
 
-<!-- ═══ HERO BANNER VAFB (GỌI TRỰC TIẾP VIDEO LOCAL VÀ TỐI ƯU AUTOPLAY) ═══ -->
+<!-- ═══ HERO BANNER VAFB (ĐÃ SỬA ĐƯỜNG DẪN ĐA TẦNG CHO CẢ GITHUB LẪN THƯ MỤC IMAGES) ═══ -->
 <section class="hero-banner-vafb">
   <video class="hero-video-bg" autoplay loop muted playsinline webkit-playsinline preload="auto" id="heroVideo">
-    <!-- Nguồn 1: Video trong máy laptop tại D:/vafb-site/images/hero-video-fashion.mp4 -->
+    <!-- Nguồn 1: Tìm trực tiếp ở Root (Chuẩn cho file hiện tại trên GitHub của bạn) -->
+    <source src="hero-video-fashion.mp4" type="video/mp4">
+    <!-- Nguồn 2: Tìm trong thư mục images (Chuẩn cho cấu trúc folder cũ) -->
     <source src="images/hero-video-fashion.mp4" type="video/mp4">
     <source src="./images/hero-video-fashion.mp4" type="video/mp4">
-    <!-- Nguồn 2: Ảnh tĩnh dự phòng chuẩn tone VAFB nếu video lỗi -->
+    <!-- Nguồn 3: Ảnh tĩnh dự phòng nếu trình duyệt hoàn toàn không hỗ trợ video -->
     <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1920&auto=format&fit=crop" class="hero-img-bg" alt="VAFB Fashion Show">
   </video>
 
