@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- ═══ NAVBAR VỚI LOGO MỚI TO NỔI BẬT ═══ -->
+<!-- ═══ NAVBAR VỚI LOGO MỚI KÍCH THƯỚC LỚN ═══ -->
 <nav class="navbar" id="navbar">
   <a href="index.html" class="nav-logo" style="display:flex; align-items:center;">
     <img src="ChatGPT Image 17_39_49 30 thg 7, 2026.png" alt="VAFB Logo" style="height: 110px; width: auto; object-fit: contain;">
@@ -18,6 +18,7 @@
     <a href="products.html">Services</a>
     <a href="contact.html">Contact</a>
 
+    <!-- AVATAR USER HIỆN KHI ĐĂNG NHẬP / ĐĂNG KÝ XONG (KẾ BÊN CONTACT) -->
     <div class="nav-user-badge" id="navUserBadge" style="display:none;" onclick="location.href='contact.html'">
       <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="User Profile" class="nav-avatar-img" id="navAvatarImg">
       <span class="nav-user-name" id="navUserName">Enterprise</span>
@@ -46,11 +47,13 @@
       <p>Select your organization type or profile to customize your experience.</p>
     </div>
 
+    <!-- Tabs chuyển Đăng nhập / Đăng ký -->
     <div class="auth-tabs">
       <button class="auth-tab active" id="tabLoginBtn" onclick="switchAuthTab('login')">Sign In</button>
       <button class="auth-tab" id="tabRegisterBtn" onclick="switchAuthTab('register')">Register</button>
     </div>
 
+    <!-- Form -->
     <form id="authForm" onsubmit="handleAuthSubmit(event)">
       <div class="auth-group">
         <label>Enterprise / Account Type *</label>
@@ -111,6 +114,7 @@
 <section class="introduce-sec has-stars feather-overlay-home">
   <div class="ctr">
     
+    <!-- HEADER LOGO VAFB CĂN GIỮA NỔI BẬT -->
     <div class="brand-intro-header rv" style="text-align: center;">
       <img src="ChatGPT Image 17_39_49 30 thg 7, 2026.png" alt="VAFB Logo Large" style="height: 110px; width: auto; margin: 0 auto 15px; display: block; object-fit: contain;">
       <h1 class="brand-full-name">VIETNAM ASSOCIATION OF FASHION &amp; BEAUTY</h1>
@@ -123,30 +127,36 @@
       empowering local fashion brands, cosmetic enterprises, designers, and manufacturers to grow sustainably together.
     </p>
 
+    <!-- Nút Learn More -->
     <a href="story.html" class="cta-learn-more-btn rv d2">
       Learn More About VAFB <span class="arr">→</span>
     </a>
 
-    <!-- POSTER GALLERY ACCORDION -->
+    <!-- POSTER GALLERY ACCORDION (ĐÃ THAY FRAGRANCE VÀ SKINCARE THÀNH ẢNH MỌI NGƯỜI MEETING/HỌP HÀNH) -->
     <div class="poster-scroll-wrap rv d2">
       <div class="poster-track">
         <div class="poster-item" onclick="location.href='products.html'">
           <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" alt="Apparel">
           <div class="poster-item-overlay"><span class="poster-overlay-title">Apparel</span></div>
         </div>
+
         <div class="poster-item" onclick="location.href='products.html'">
           <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop" alt="Cosmetics">
           <div class="poster-item-overlay"><span class="poster-overlay-title">Cosmetics</span></div>
         </div>
+
+        <!-- 1. FRAGRANCE: ĐỔI THÀNH ẢNH BUỔI HỌP/GIAO LƯU ĐỐI TÁC CÔNG TY -->
         <div class="poster-item" onclick="location.href='products.html'">
-          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop" alt="Fragrance">
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop" alt="Fragrance">
           <div class="poster-item-overlay"><span class="poster-overlay-title">Fragrance</span></div>
         </div>
+
         <div class="poster-item" onclick="location.href='products.html'">
           <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop" alt="Editorial">
           <div class="poster-item-overlay"><span class="poster-overlay-title">Editorial</span></div>
         </div>
         
+        <!-- KHỐI SHOWCASE -->
         <div class="poster-item showcase-card" onclick="location.href='products.html#showcase'">
           <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop" alt="Showcase Background" class="showcase-bg-img">
           <div class="showcase-overlay-box">
@@ -154,28 +164,27 @@
           </div>
         </div>
 
+        <!-- 2. SKINCARE: ĐỔI THÀNH ẢNH THẢO LUẬN/MEETING NHÓM SANG TRỌNG -->
         <div class="poster-item" onclick="location.href='products.html'">
-          <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=800&auto=format&fit=crop" alt="Skincare">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop" alt="Skincare">
           <div class="poster-item-overlay"><span class="poster-overlay-title">Skincare</span></div>
         </div>
+
         <div class="poster-item" onclick="location.href='products.html'">
           <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" alt="Makeup">
           <div class="poster-item-overlay"><span class="poster-overlay-title">Makeup</span></div>
         </div>
+
         <div class="poster-item" onclick="location.href='products.html'">
           <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop" alt="Catwalk">
           <div class="poster-item-overlay"><span class="poster-overlay-title">Catwalk</span></div>
         </div>
 
         <div class="poster-item" onclick="location.href='products.html'">
-          <img src="https://images.unsplash.com/photo-1583241800698-e8ab01c85b27?q=80&w=800&auto=format&fit=crop" alt="Luxury Perfume">
-          <div class="poster-item-overlay"><span class="poster-overlay-title">Luxury Perfume</span></div>
-        </div>
-
-        <div class="poster-item" onclick="location.href='products.html'">
           <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=800&auto=format&fit=crop" alt="Palette">
           <div class="poster-item-overlay"><span class="poster-overlay-title">Beauty Kit</span></div>
         </div>
+
         <div class="poster-item" onclick="location.href='products.html'">
           <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop" alt="Networking">
           <div class="poster-item-overlay"><span class="poster-overlay-title">Networking</span></div>
