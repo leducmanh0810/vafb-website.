@@ -3,8 +3,8 @@
 /* ─── COLOR PALETTE VARIABLES (TỶ LỆ 50% ĐỎ - 30% TRẮNG - 10% BEIGE - 10% ĐEN) ─── */
 :root {
   /* Tông Đỏ Garnet Burgundy (50% diện tích) */
-  --red-main: #7A0F18;      
-  --red-dark: #5C0B12;      
+  --red-main: #7A0F18;     
+  --red-dark: #5C0B12;     
   --red-bright: #9E1B27;    
 
   /* Trắng Pearl White sạch sẽ (30%) */
@@ -59,12 +59,12 @@ button { font-family: var(--f); cursor: pointer; }
 }
 
 /* ═══════════════════════════════
-   NAVBAR (NỀN TRẮNG PEARL WHITE - CHỮ ĐỎ - LOGO MÀU ĐỎ GARNET)
+   NAVBAR (NỀN TRẮNG PEARL WHITE ĐỒNG BỘ CẢ DESKTOP & MOBILE)
 ═══════════════════════════════ */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 300;
   height: var(--nav-h); 
-  background: var(--white-pearl) !important; /* Đổi nền Navbar thành Trắng */
+  background: var(--white-pearl) !important; /* Đảm bảo nền luôn màu Trắng */
   border-bottom: 2px solid var(--beige-champagne);
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 48px; transition: box-shadow .3s;
@@ -72,19 +72,19 @@ button { font-family: var(--f); cursor: pointer; }
 .navbar.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,.15); }
 .nav-logo { display: flex; align-items: center; }
 
-/* RIÊNG LOGO TOOLBAR NAVBAR: ĐỔI THÀNH MÀU ĐỎ GARNET BURGUNDY */
+/* LOGO NAVBAR: ĐỔI MÀU BURGUNDY */
 .nav-logo img { 
   height: 110px !important; 
   width: auto !important; 
   display: block; 
   object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(12%) sepia(85%) saturate(3800%) hue-rotate(345deg) brightness(80%) !important; /* Lọc logo nét đen sang MÀU ĐỎ BURGUNDY */
+  filter: brightness(0) saturate(100%) invert(12%) sepia(85%) saturate(3800%) hue-rotate(345deg) brightness(80%) !important;
   transition: transform 0.3s ease;
 }
 .nav-logo img:hover { transform: scale(1.03); }
 
-/* CHỮ MENU MÀU ĐỎ GARNET BURGUNDY */
-.nav-links { display: flex; align-items: center; gap: 32px; }
+/* MENU DESKTOP: CHỮ MÀU ĐỎ GARNET BURGUNDY */
+.nav-links { display: flex; align-items: center; gap: 24px; }
 .nav-links a { 
   color: var(--red-main) !important; 
   font-weight: 700; 
@@ -95,7 +95,26 @@ button { font-family: var(--f); cursor: pointer; }
   color: var(--red-bright) !important; 
 }
 
-/* User Badge khi nền trắng */
+/* [BỔ SUNG MỚI]: NÚT ĐĂNG NHẬP / ĐĂNG KÝ TRÊN NAVBAR */
+.nav-auth-btn {
+  background: var(--red-main);
+  color: var(--white-pearl) !important;
+  border: 1px solid var(--beige-champagne);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+.nav-auth-btn:hover {
+  background: var(--red-bright);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(122, 15, 24, 0.3);
+}
+
+/* User Badge */
 .nav-user-badge {
   display: flex; align-items: center; gap: 10px;
   background: rgba(122, 15, 24, 0.08); 
@@ -106,21 +125,26 @@ button { font-family: var(--f); cursor: pointer; }
 .nav-avatar-img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--red-main); }
 .nav-user-name { color: var(--red-main) !important; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; }
 
-.burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; }
+/* Nút Burger (3 gạch) */
+.burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; cursor: pointer; }
 .burger span { display: block; width: 22px; height: 2px; background: var(--red-main) !important; border-radius: 2px; transition: transform .3s, opacity .3s; }
 .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .burger.open span:nth-child(2) { opacity: 0; }
 .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* MENU MOBILE XỔ XUỐNG NỀN TRẮNG PEARL */
 .mob-menu {
-  display: none; position: fixed;
+  display: flex; position: fixed;
   top: var(--nav-h); left: 0; right: 0; bottom: 0; z-index: 299;
-  background: var(--white-pearl); border-top: 1px solid var(--beige-champagne);
+  background: var(--white-pearl) !important;
+  border-top: 1px solid var(--beige-champagne);
   flex-direction: column; align-items: center; justify-content: center; gap: 32px;
-  opacity: 0; transition: opacity .25s; padding: 24px;
+  opacity: 0; pointer-events: none; transition: opacity .25s ease; padding: 24px;
 }
-.mob-menu.show { display: flex; }
-.mob-menu.open { opacity: 1; }
+.mob-menu.show, .mob-menu.open { 
+  opacity: 1; 
+  pointer-events: all; 
+}
 .mob-menu a { color: var(--red-main) !important; font-weight: 800; font-size: 24px; }
 
 /* ═══════════════════════════════
@@ -188,13 +212,12 @@ button { font-family: var(--f); cursor: pointer; }
   text-align: center; margin: 0 auto 24px; padding: 10px 0; width: 100%;
 }
 
-/* LOGO Ở GIỮA TRANG CHỦ: VẪN GIỮ MÀU TRẮNG TINH VÀ KÍCH THƯỚC 260PX HOÀNH TRÁNG */
 .vafb-logo-svg-large { 
   height: 260px !important; 
   width: auto !important; 
   margin: 0 auto 20px !important; 
   display: block;
-  filter: brightness(0) invert(1) !important; /* Giữ màu TRẮNG cho logo giữa trang */
+  filter: brightness(0) invert(1) !important;
 }
 
 .brand-full-name {
@@ -267,7 +290,7 @@ button { font-family: var(--f); cursor: pointer; }
 .more-row a { font-size: 13px; font-weight: 700; color: var(--beige-champagne); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ═══════════════════════════════
-   KHỐI FAQ NỀN TRẮNG PEARL - CHỮ ĐEN DỄ ĐỌC
+   KHỐI FAQ NỀN TRẮNG PEARL
 ═══════════════════════════════ */
 .faq-sec { background: var(--red-main); padding: 56px 0 60px; }
 .faq-title { font-size: clamp(18px,3vw,30px); font-weight: 800; text-align: center; text-transform: uppercase; color: var(--white-pearl); margin-bottom: 32px; }
@@ -297,7 +320,7 @@ button { font-family: var(--f); cursor: pointer; }
 .faq-ans.open { max-height: 320px; padding: 14px 20px 18px; border-top: 1px solid rgba(0,0,0,0.08); }
 
 /* ═══════════════════════════════
-   FORM CONTACT TRẮNG SÁNG - CHỮ ĐEN NỔI BẬT
+   FORM CONTACT
 ═══════════════════════════════ */
 .contact-page { padding-top: var(--nav-h); background: var(--red-main); min-height: 100vh; }
 .contact-inner { padding: 48px 0 60px; }
@@ -325,7 +348,7 @@ button { font-family: var(--f); cursor: pointer; }
 .form-ok { display: none; margin-top: 14px; padding: 12px 16px; background: #edf7ed; border-radius: 8px; font-size: 12px; font-weight: 700; color: #2e7d32; }
 
 /* ═══════════════════════════════
-   FOOTER (LOGOS TRONG FOOTER CŨNG NÊN NỔI TRÊN NỀN ĐEN)
+   FOOTER
 ═══════════════════════════════ */
 .footer { background: var(--black-elegant); border-top: 1.5px solid var(--beige-champagne); padding: 48px 48px 0; }
 .footer-inner { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: 1.8fr 1fr 1.5fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,233,179,.2); }
@@ -341,7 +364,7 @@ button { font-family: var(--f); cursor: pointer; }
 .fcopy { text-align: center; padding: 16px; font-size: 10px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--white-pearl); opacity: .5; }
 
 /* ═══════════════════════════════
-   AUTH MODAL (LOGO TRONG MODAL GIỮ MÀU TRẮNG HOẶC ĐỎ)
+   AUTH MODAL
 ═══════════════════════════════ */
 .auth-modal-overlay {
   position: fixed; inset: 0; background: rgba(13, 13, 13, 0.85); backdrop-filter: blur(6px);
@@ -480,7 +503,7 @@ button { font-family: var(--f); cursor: pointer; }
 @media (max-width: 600px) {
   :root { --nav-h: 80px; }
   
-  .navbar { padding: 0 16px; }
+  .navbar { padding: 0 16px; background: var(--white-pearl) !important; }
   .nav-logo img, .vafb-logo-svg { height: 65px !important; }
   .nav-links { display: none; }
   .burger { display: flex; }
