@@ -18,6 +18,9 @@
     <a href="products.html">Services</a>
     <a href="contact.html">Contact</a>
 
+    <!-- [BỔ SUNG MỚI]: Nút Đăng nhập / Đăng ký góc phải -->
+    <button class="nav-auth-btn" id="navAuthBtn" onclick="openAuthModal()">Sign In / Register</button>
+
     <!-- AVATAR USER HIỆN KHI ĐĂNG NHẬP / ĐĂNG KÝ XONG (KẾ BÊN CONTACT) -->
     <div class="nav-user-badge" id="navUserBadge" style="display:none;" onclick="location.href='contact.html'">
       <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="User Profile" class="nav-avatar-img" id="navAvatarImg">
@@ -132,7 +135,7 @@
       Learn More About VAFB <span class="arr">→</span>
     </a>
 
-    <!-- POSTER GALLERY ACCORDION (ĐÃ THAY FRAGRANCE VÀ SKINCARE THÀNH ẢNH MỌI NGƯỜI MEETING/HỌP HÀNH) -->
+    <!-- POSTER GALLERY ACCORDION -->
     <div class="poster-scroll-wrap rv d2">
       <div class="poster-track">
         <div class="poster-item" onclick="location.href='products.html'">
@@ -145,7 +148,6 @@
           <div class="poster-item-overlay"><span class="poster-overlay-title">Cosmetics</span></div>
         </div>
 
-        <!-- 1. FRAGRANCE: ĐỔI THÀNH ẢNH BUỔI HỌP/GIAO LƯU ĐỐI TÁC CÔNG TY -->
         <div class="poster-item" onclick="location.href='products.html'">
           <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop" alt="Fragrance">
           <div class="poster-item-overlay"><span class="poster-overlay-title">Fragrance</span></div>
@@ -164,7 +166,6 @@
           </div>
         </div>
 
-        <!-- 2. SKINCARE: ĐỔI THÀNH ẢNH THẢO LUẬN/MEETING NHÓM SANG TRỌNG -->
         <div class="poster-item" onclick="location.href='products.html'">
           <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop" alt="Skincare">
           <div class="poster-item-overlay"><span class="poster-overlay-title">Skincare</span></div>
