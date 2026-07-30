@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap');
 
-/* ─── COLOR PALETTE VARIABLES (TỶ LỆ 50% ĐỎ - 30% TRẮNG - 10% BEIGE - 10% ĐEN) ─── */
+/* ─── COLOR PALETTE VARIABLES ─── */
 :root {
-  /* Các dải Tone Đỏ (Chủ đạo 50%) */
-  --red-main: #7A0F18;      /* Garnet Burgundy chủ đạo */
-  --red-dark: #5C0B12;      /* Đỏ thẫm tạo chiều sâu / Hover */
-  --red-bright: #9E1B27;    /* Đỏ tươi điểm nhấn nút bấm */
-  --red-light: #B82330;     /* Đỏ sáng cho thẻ Tag / Highlight */
+  /* Tông Đỏ Garnet Burgundy */
+  --red-main: #7A0F18;      
+  --red-dark: #5C0B12;      
+  --red-bright: #9E1B27;    
 
-  /* Trắng Pearl White (30%) */
-  --white-pearl: #FFF8E1;   /* Nền sáng / Chữ trên nền tối */
+  /* Trắng Pearl White sạch sẽ */
+  --white-pearl: #FFFFFF;   
+  --white-bg: #FFF8E1;
 
-  /* Beige Champagne (10% - Đường viền, Badge, Khung) */
+  /* Beige Champagne chỉ dùng viền tinh tế */
   --beige-champagne: #FFE9B3;
 
-  /* Elegant Black (10% - Navbar, Footer, Layer chiều sâu) */
+  /* Elegant Black cho chữ & Navbar */
   --black-elegant: #0D0D0D;
 
   --nav-h: 120px;
   --f: 'Montserrat', sans-serif;
 }
 
-/* ─── Reset & Mobile Guard ─── */
+/* ─── Reset ─── */
 *, *::before, *::after { 
   box-sizing: border-box; 
   margin: 0; 
@@ -33,7 +33,7 @@ html {
 }
 body { 
   font-family: var(--f); 
-  background: var(--red-main); /* Đỏ chiếm diện tích chính */
+  background: var(--red-main); 
   color: var(--white-pearl); 
   overflow-x: hidden; 
   width: 100%;
@@ -59,12 +59,12 @@ button { font-family: var(--f); cursor: pointer; }
 }
 
 /* ═══════════════════════════════
-   NAVBAR (ELEGANT BLACK + VIỀN BEIGE)
+   NAVBAR
 ═══════════════════════════════ */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 300;
   height: var(--nav-h); background: var(--black-elegant);
-  border-bottom: 1.5px solid var(--beige-champagne); /* Viền Beige 10% */
+  border-bottom: 1.5px solid var(--beige-champagne);
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 48px; transition: box-shadow .3s;
 }
@@ -78,9 +78,7 @@ button { font-family: var(--f); cursor: pointer; }
   object-fit: contain;
   transition: transform 0.3s ease;
 }
-.nav-logo img:hover {
-  transform: scale(1.03);
-}
+.nav-logo img:hover { transform: scale(1.03); }
 
 .nav-links { display: flex; align-items: center; gap: 32px; }
 .nav-links a { color: var(--white-pearl); font-weight: 600; font-size: 13px; transition: color .2s; }
@@ -89,7 +87,7 @@ button { font-family: var(--f); cursor: pointer; }
 .nav-user-badge {
   display: flex; align-items: center; gap: 10px;
   background: rgba(255, 233, 179, 0.12); 
-  border: 1px solid var(--beige-champagne); /* Viền Beige */
+  border: 1px solid var(--beige-champagne);
   padding: 5px 14px 5px 6px; border-radius: 50px; cursor: pointer; transition: all 0.3s ease;
 }
 .nav-user-badge:hover { background: rgba(255, 233, 179, 0.28); }
@@ -105,66 +103,16 @@ button { font-family: var(--f); cursor: pointer; }
 .mob-menu {
   display: none; position: fixed;
   top: var(--nav-h); left: 0; right: 0; bottom: 0; z-index: 299;
-  background: var(--black-elegant);
-  border-top: 1px solid var(--beige-champagne);
+  background: var(--black-elegant); border-top: 1px solid var(--beige-champagne);
   flex-direction: column; align-items: center; justify-content: center; gap: 32px;
   opacity: 0; transition: opacity .25s; padding: 24px;
 }
 .mob-menu.show { display: flex; }
 .mob-menu.open { opacity: 1; }
-.mob-menu a { color: var(--white-pearl); font-weight: 800; font-size: 24px; letter-spacing: -0.5px; }
+.mob-menu a { color: var(--white-pearl); font-weight: 800; font-size: 24px; }
 
 /* ═══════════════════════════════
-   BACKGROUND ASSETS & EFFECTS
-═══════════════════════════════ */
-.has-stars { position: relative; overflow: hidden; }
-.has-stars::before {
-  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-  background-image:
-    url('images/sao.png'), url('images/sao.png'), url('images/sao.png'), url('images/sao.png'), 
-    url('images/sao.png'), url('images/sao.png'), url('images/sao.png'), url('images/sao.png'), 
-    url('images/sao.png'), url('images/sao.png'), url('images/sao.png'), url('images/sao.png');
-  background-repeat: no-repeat;
-  background-size: 36px, 12px, 32px, 18px, 10px, 28px, 14px, 34px, 20px, 11px, 26px, 20px;
-  background-position: 4% 10%, 15% 6%, 28% 18%, 40% 3%, 52% 8%, 68% 14%, 78% 5%, 88% 22%, 95% 48%, 90% 68%, 75% 78%, 60% 88%;
-  animation: starsAnim 7s ease-in-out infinite alternate; opacity: .4;
-  filter: brightness(0) invert(1);
-}
-@keyframes starsAnim { from { opacity: .3; transform: scale(1); } to { opacity: .6; transform: scale(1.015); } }
-
-.wave-down {
-  width: 100%; height: 60px; position: relative; z-index: 2;
-  background: url('images/sóng.png') center bottom / 100% 100% no-repeat;
-  filter: brightness(0) saturate(100%) invert(10%) sepia(85%) saturate(4000%) hue-rotate(345deg) brightness(80%);
-  margin-bottom: -3px;
-}
-.wave-up {
-  width: 100%; height: 60px; position: relative; z-index: 2;
-  background: url('images/chảy.png') center bottom / 100% 100% no-repeat;
-  filter: brightness(0) saturate(100%) invert(95%) sepia(20%) saturate(800%) hue-rotate(330deg) brightness(105%);
-  margin-bottom: -3px;
-}
-.has-shards { position: relative; overflow: hidden; }
-.has-shards::after {
-  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-  background-image: url('images/vụn.png'), url('images/vụn.png'), url('images/vụn.png');
-  background-repeat: no-repeat; background-size: 80px, 60px, 50px;
-  background-position: 98% -2%, 88% 6%, 76% -1%;
-  filter: brightness(0) saturate(100%) invert(10%) sepia(85%) saturate(4000%) hue-rotate(345deg) brightness(80%);
-  opacity: .15; animation: shardsAnim 10s ease-in-out infinite alternate;
-}
-@keyframes shardsAnim { from{transform:translate(0,0) rotate(0deg)} to{transform:translate(5px,-8px) rotate(4deg)} }
-
-/* ═══════════════════════════════
-   ANIMATIONS
-═══════════════════════════════ */
-.rv { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
-.rv.in { opacity: 1; transform: translateY(0); }
-.rv.d1 { transition-delay: .1s; } .rv.d2 { transition-delay: .2s; }
-.rv.d3 { transition-delay: .3s; } .rv.d4 { transition-delay: .4s; }
-
-/* ═══════════════════════════════
-   HERO BANNER (NỀN ĐỎ GARNET BURGUNDY + ĐEN ELEGANT OVERLAY)
+   HERO BANNER
 ═══════════════════════════════ */
 .hero-banner-vafb {
   position: relative; width: 100%; height: 82vh; min-height: 480px; max-height: 780px;
@@ -184,7 +132,7 @@ button { font-family: var(--f); cursor: pointer; }
 .hero-vafb-tag {
   display: inline-block; color: var(--beige-champagne); font-size: 11px; font-weight: 800; letter-spacing: 2px;
   text-transform: uppercase; margin-bottom: 12px; background: rgba(122, 15, 24, 0.6);
-  padding: 6px 14px; border-radius: 4px; border: 1px solid var(--beige-champagne); /* Viền Beige */
+  padding: 6px 14px; border-radius: 4px; border: 1px solid var(--beige-champagne);
 }
 .hero-vafb-title {
   font-size: clamp(24px, 4.8vw, 54px); font-weight: 900; color: var(--white-pearl); line-height: 1.2;
@@ -197,7 +145,7 @@ button { font-family: var(--f); cursor: pointer; }
 .btn-vafb-gold {
   background: var(--red-bright); color: var(--white-pearl) !important; font-weight: 800; font-size: 13px;
   padding: 13px 28px; border-radius: 50px; letter-spacing: 0.5px; text-align: center;
-  border: 1.5px solid var(--beige-champagne); /* Viền Beige */
+  border: 1.5px solid var(--beige-champagne);
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 6px 20px rgba(122, 15, 24, 0.5);
 }
 .btn-vafb-gold:hover { background: var(--red-main); transform: translateY(-3px); border-color: #fff; }
@@ -218,7 +166,7 @@ button { font-family: var(--f); cursor: pointer; }
 .hero-video-ctrl:hover { background: var(--red-bright); color: #fff; transform: scale(1.08); }
 
 /* ═══════════════════════════════
-   INTRODUCE SECTION (NỀN ĐỎ GARNET BURGUNDY PHỦ RỘNG 50%)
+   INTRODUCE SECTION & POSTER GALLERY
 ═══════════════════════════════ */
 .introduce-sec { background: var(--red-main); padding: 56px 0 0; }
 .introduce-sec .ctr { text-align: center; display: flex; flex-direction: column; align-items: center; }
@@ -238,7 +186,7 @@ button { font-family: var(--f); cursor: pointer; }
 .cta-learn-more-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--red-bright);
   color: var(--white-pearl) !important; font-size: 14px; font-weight: 800; padding: 14px 32px;
-  border-radius: 50px; border: 1.5px solid var(--beige-champagne); /* Viền Beige */
+  border-radius: 50px; border: 1.5px solid var(--beige-champagne);
   box-shadow: 0 8px 24px rgba(13, 13, 13, 0.4); transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   margin-bottom: 24px; position: relative; z-index: 3;
 }
@@ -256,10 +204,10 @@ button { font-family: var(--f); cursor: pointer; }
 .poster-item {
   width: 85px; height: 360px; border-radius: 16px; overflow: hidden; cursor: pointer; flex-shrink: 0;
   transition: width 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s ease, box-shadow 0.4s ease;
-  background: var(--red-dark); border: 1.5px solid var(--beige-champagne); /* Viền Beige 10% */
+  background: var(--white-pearl); border: 1.5px solid var(--beige-champagne);
   box-shadow: 0 4px 12px rgba(0,0,0,.3); position: relative;
 }
-.poster-item img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: opacity 0.4s ease, filter 0.5s ease; opacity: 0.85; }
+.poster-item img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: opacity 0.4s ease; opacity: 0.85; }
 .poster-item:hover { width: 260px; transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,.5); }
 .poster-item:hover img { opacity: 1; }
 .poster-item-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13, 13, 13, 0.95), transparent); display: flex; align-items: flex-end; padding: 14px; opacity: 0; transition: opacity 0.3s ease; }
@@ -272,30 +220,96 @@ button { font-family: var(--f); cursor: pointer; }
 .showcase-card-text { font-size: 22px; font-weight: 800; color: var(--white-pearl); font-family: 'Montserrat', sans-serif; letter-spacing: 1px; position: relative; z-index: 2; }
 
 /* ═══════════════════════════════
-   DARK SECTION (GARNET BURGUNDY ĐẬM + CARD WHITE PEARL 30%)
+   SỬA TOÀN BỘ CARD DỊCH VỤ THÀNH NỀN TRẮNG - CHỮ ĐEN/ĐỎ SẮC NÉT
 ═══════════════════════════════ */
 .dark-sec { background: var(--red-dark); position: relative; }
 .dark-inner { position: relative; z-index: 3; padding-top: 40px; padding-bottom: 16px; }
 .sec-title-cream { font-size: clamp(26px,5vw,52px); font-weight: 800; color: var(--white-pearl); text-align: center; margin-bottom: 24px; letter-spacing: -0.5px; }
 .pgrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 20px; }
+
+/* Thẻ Card Nền Trắng Tinh Tế */
 .pcard { 
-  background: var(--white-pearl); /* Nền Card Trắng Pearl White 30% */
-  border: 1.5px solid var(--beige-champagne); /* Viền Beige */
+  background: var(--white-pearl) !important; 
+  border: 1.5px solid var(--beige-champagne) !important;
   border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s; position: relative; 
 }
 .pcard:hover { transform: translateY(-6px) scale(1.015); box-shadow: 0 16px 40px rgba(0,0,0,.5); border-color: var(--white-pearl); }
-.pcard-img { aspect-ratio: 1; overflow: hidden; background: var(--red-dark); display: flex; align-items: center; justify-content: center; }
+.pcard-img { aspect-ratio: 1; overflow: hidden; background: #e0e0e0; display: flex; align-items: center; justify-content: center; }
 .pcard-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s; }
 .pcard:hover .pcard-img img { transform: scale(1.08); }
-.pcard-body { padding: 10px 12px 14px; }
-.ctag { display: inline-block; background: var(--red-main); color: var(--white-pearl); font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; margin-bottom: 5px; }
-.pname { font-size: 12px; font-weight: 700; color: var(--red-dark); margin-bottom: 3px; }
-.pprice { font-size: 16px; font-weight: 800; color: var(--red-main); }
+
+/* Chữ trong Card màu Đỏ Thẫm & Đen Rõ Nét */
+.pcard-body { padding: 12px 14px 16px; background: var(--white-pearl) !important; }
+.ctag { display: inline-block; background: var(--red-main); color: var(--white-pearl); font-size: 9px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 6px; }
+.pname { font-size: 13px; font-weight: 800; color: var(--black-elegant) !important; margin-bottom: 4px; line-height: 1.4; }
+.pprice { font-size: 14px; font-weight: 800; color: var(--red-main) !important; }
+
 .more-row { text-align: center; padding-bottom: 8px; }
 .more-row a { font-size: 13px; font-weight: 700; color: var(--beige-champagne); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ═══════════════════════════════
-   FOOTER (ELEGANT BLACK 10% + VIỀN BEIGE)
+   SỬA KHỐI FAQ THÀNH NỀN TRẮNG - CHỮ ĐEN
+═══════════════════════════════ */
+.faq-sec { background: var(--red-main); padding: 56px 0 60px; }
+.faq-title { font-size: clamp(18px,3vw,30px); font-weight: 800; text-align: center; text-transform: uppercase; color: var(--white-pearl); margin-bottom: 32px; }
+.faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+
+.faq-item { border-radius: 12px; overflow: hidden; border: 1.5px solid var(--beige-champagne); box-shadow: 0 4px 16px rgba(0,0,0,.25); }
+
+/* Nút FAQ Trắng - Chữ Đen */
+.faq-btn { 
+  width: 100%; display: flex; align-items: center; gap: 12px; 
+  background: var(--white-pearl) !important; border: none; cursor: pointer; 
+  padding: 16px 20px; text-align: left; font-family: var(--f); 
+  font-weight: 800; font-size: 13.5px; color: var(--black-elegant) !important; 
+}
+.faq-btn.open { background: var(--black-elegant) !important; color: var(--beige-champagne) !important; }
+
+.fq-q { width: 24px; height: 24px; border-radius: 50%; background: var(--red-main); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 11px; flex-shrink: 0; }
+.faq-btn.open .fq-q { background: var(--beige-champagne); color: var(--black-elegant); }
+.fq-ico { margin-left: auto; font-size: 18px; font-weight: 600; color: var(--red-main); }
+.faq-btn.open .fq-ico { color: var(--beige-champagne); }
+
+/* Câu trả lời FAQ Trắng - Chữ Đen Dễ Đọc */
+.faq-ans { 
+  max-height: 0; overflow: hidden; 
+  background: var(--white-pearl) !important; 
+  padding: 0 20px; font-size: 13px; line-height: 1.8; 
+  color: #111111 !important; transition: max-height .38s ease, padding .25s; 
+}
+.faq-ans.open { max-height: 320px; padding: 14px 20px 18px; border-top: 1px solid rgba(0,0,0,0.08); }
+
+/* ═══════════════════════════════
+   SỬA KHỐI FORM CONTACT THÀNH TRẮNG - CHỮ ĐEN
+═══════════════════════════════ */
+.contact-page { padding-top: var(--nav-h); background: var(--red-main); min-height: 100vh; }
+.contact-inner { padding: 48px 0 60px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: start; }
+.contact-co { font-weight: 800; font-size: 14px; color: var(--beige-champagne); margin-bottom: 12px; }
+.contact-details p { font-size: 13px; line-height: 2; color: var(--white-pearl); opacity: .9; }
+
+/* Khối Form Nền Trắng Tinh */
+.cform { 
+  background: var(--white-pearl) !important; 
+  border: 2px solid var(--beige-champagne); 
+  border-radius: 16px; padding: 28px; 
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4); 
+}
+.fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 20px; }
+.fg { display: flex; flex-direction: column; gap: 6px; }
+.fg.s2 { grid-column: 1/-1; }
+.fg label { font-size: 10.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--red-dark) !important; }
+.fg input, .fg textarea { 
+  background: #fcfcfc !important; 
+  border: none; border-bottom: 2px solid var(--red-main) !important; 
+  padding: 10px 4px; font-family: var(--f); font-size: 13px; 
+  color: var(--black-elegant) !important; outline: none; resize: none; 
+}
+.fg input::placeholder, .fg textarea::placeholder { color: #777777 !important; }
+.form-ok { display: none; margin-top: 14px; padding: 12px 16px; background: #edf7ed; border-radius: 8px; font-size: 12px; font-weight: 700; color: #2e7d32; }
+
+/* ═══════════════════════════════
+   FOOTER
 ═══════════════════════════════ */
 .footer { background: var(--black-elegant); border-top: 1.5px solid var(--beige-champagne); padding: 48px 48px 0; }
 .footer-inner { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: 1.8fr 1fr 1.5fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,233,179,.2); }
@@ -311,7 +325,7 @@ button { font-family: var(--f); cursor: pointer; }
 .fcopy { text-align: center; padding: 16px; font-size: 10px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--white-pearl); opacity: .5; }
 
 /* ═══════════════════════════════
-   AUTH MODAL & HERO BANNERS
+   AUTH MODAL
 ═══════════════════════════════ */
 .auth-modal-overlay {
   position: fixed; inset: 0; background: rgba(13, 13, 13, 0.85); backdrop-filter: blur(6px);
@@ -331,8 +345,6 @@ button { font-family: var(--f); cursor: pointer; }
 .auth-group label { font-size: 10px; font-weight: 800; color: var(--red-dark); text-transform: uppercase; letter-spacing: 1px; }
 .auth-input { width: 100%; padding: 11px 12px; border: 1.5px solid var(--beige-champagne); border-radius: 8px; font-family: var(--f); font-size: 13px; outline: none; background: #fff; color: var(--red-dark); }
 .auth-submit-btn { width: 100%; padding: 13px; background: var(--red-main); color: var(--white-pearl); border: 1px solid var(--beige-champagne); border-radius: 8px; font-weight: 800; font-size: 13px; cursor: pointer; margin-top: 10px; }
-.auth-guest-option { text-align: center; margin-top: 16px; font-size: 12px; color: var(--red-dark); opacity: .8; display: flex; flex-direction: column; gap: 4px; }
-.auth-guest-btn { background: none; border: none; color: var(--red-main); font-weight: 700; cursor: pointer; text-decoration: underline; }
 
 .about-hero-banner { position: relative; height: 360px; overflow: hidden; padding-top: var(--nav-h); background: var(--red-dark); }
 .about-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -350,7 +362,7 @@ button { font-family: var(--f); cursor: pointer; }
 .btn-red-contact:hover { background: var(--red-main); transform: translateY(-2px); }
 
 /* ═══════════════════════════════
-   OTHER PAGES & FAQ (ĐỌC DỄ VỚI NỀN TRẮNG PEARL/ĐỎ DÂN DỤNG)
+   OTHER PAGES
 ═══════════════════════════════ */
 .prod-hero { padding-top: var(--nav-h); background: var(--red-main); }
 .pg-title { font-size: clamp(32px,6vw,72px); font-weight: 800; color: var(--white-pearl); text-align: center; padding: 0 0 20px; letter-spacing: -1px; position: relative; z-index: 3; }
@@ -359,18 +371,6 @@ button { font-family: var(--f); cursor: pointer; }
 .fbtn { background: transparent; border: 1.5px solid var(--beige-champagne); color: var(--white-pearl); font-family: var(--f); font-weight: 700; font-size: 12px; padding: 8px 18px; border-radius: 50px; cursor: pointer; transition: all .2s; }
 .fbtn.on, .fbtn:hover { background: var(--beige-champagne); color: var(--red-dark); }
 .filterable.hidden { display: none !important; }
-
-.faq-sec { background: var(--red-main); padding: 56px 0 60px; }
-.faq-title { font-size: clamp(18px,3vw,30px); font-weight: 800; text-align: center; text-transform: uppercase; color: var(--white-pearl); margin-bottom: 32px; }
-.faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
-.faq-item { border-radius: 10px; overflow: hidden; border: 1px solid var(--beige-champagne); box-shadow: 0 2px 10px rgba(0,0,0,.3); }
-.faq-btn { width: 100%; display: flex; align-items: center; gap: 12px; background: var(--white-pearl); border: none; cursor: pointer; padding: 15px 16px; text-align: left; font-family: var(--f); font-weight: 700; font-size: 13px; color: var(--red-dark); }
-.faq-btn.open { background: var(--black-elegant); color: var(--beige-champagne); }
-.fq-q { width: 24px; height: 24px; border-radius: 50%; background: var(--red-main); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 11px; flex-shrink: 0; }
-.faq-btn.open .fq-q { background: var(--beige-champagne); color: var(--red-dark); }
-.fq-ico { margin-left: auto; font-size: 18px; font-weight: 300; }
-.faq-ans { max-height: 0; overflow: hidden; background: var(--white-pearl); padding: 0 16px; font-size: 13px; line-height: 1.8; color: var(--red-dark); transition: max-height .38s ease, padding .25s; }
-.faq-ans.open { max-height: 320px; padding: 14px 16px 16px; }
 
 .story-dark { background: var(--red-dark); padding: 48px 0 0; }
 .story-dark-inner { position: relative; z-index: 3; padding-bottom: 48px; }
@@ -414,20 +414,6 @@ button { font-family: var(--f); cursor: pointer; }
 .safety-box p { font-size: 12px; line-height: 1.7; color: var(--red-dark); }
 .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--red-bright); color: var(--white-pearl); border: 1.5px solid var(--beige-champagne); font-family: var(--f); font-weight: 700; font-size: 14px; padding: 12px 28px; border-radius: 50px; cursor: pointer; width: 100%; }
 
-.contact-page { padding-top: var(--nav-h); background: var(--red-main); min-height: 100vh; }
-.contact-inner { padding: 48px 0 60px; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: start; }
-.contact-title { font-size: clamp(28px,5vw,60px); font-weight: 800; color: var(--white-pearl); margin-bottom: 20px; }
-.contact-co { font-weight: 800; font-size: 14px; color: var(--beige-champagne); margin-bottom: 12px; }
-.contact-details p { font-size: 13px; line-height: 2; color: var(--white-pearl); opacity: .9; }
-.cform { background: var(--white-pearl); border: 2px solid var(--beige-champagne); border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
-.fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
-.fg { display: flex; flex-direction: column; gap: 6px; }
-.fg.s2 { grid-column: 1/-1; }
-.fg label { font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--red-dark); }
-.fg input, .fg textarea { background: none; border: none; border-bottom: 1.5px solid var(--red-main); padding: 8px 0; font-family: var(--f); font-size: 13px; color: var(--red-dark); outline: none; resize: none; }
-.form-ok { display: none; margin-top: 14px; padding: 12px 16px; background: #edf7ed; border-radius: 8px; font-size: 12px; font-weight: 700; color: #2e7d32; }
-
 /* ═══════════════════════════════
    AI CHATBOT WIDGET
 ═══════════════════════════════ */
@@ -461,7 +447,7 @@ button { font-family: var(--f); cursor: pointer; }
 .chat-send { width: 34px; height: 34px; border-radius: 50%; background: var(--red-main); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 
 /* ═══════════════════════════════
-   RESPONSIVE BREAKPOINTS (OPTIMIZED FOR MOBILE)
+   RESPONSIVE BREAKPOINTS
 ═══════════════════════════════ */
 @media (max-width: 960px) {
   .ctr { padding: 0 24px; }
