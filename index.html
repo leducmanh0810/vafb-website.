@@ -8,18 +8,16 @@
 </head>
 <body>
 
-<!-- ═══ NAVBAR VỚI LOGO MỚI ═══ -->
+<!-- ═══ NAVBAR VỚI LOGO MỚI TO NỔI BẬT ═══ -->
 <nav class="navbar" id="navbar">
-  <a href="index.html" class="nav-logo" style="display:flex; align-items:center; gap:14px;">
-    <!-- ĐÃ THAY LOGO SVG BẰNG THẺ IMG -->
-    <img src="ChatGPT Image 17_39_49 30 thg 7, 2026.png" alt="VAFB Logo" style="height: 50px; width: auto; object-fit: contain;">
+  <a href="index.html" class="nav-logo" style="display:flex; align-items:center;">
+    <img src="ChatGPT Image 17_39_49 30 thg 7, 2026.png" alt="VAFB Logo" style="height: 110px; width: auto; object-fit: contain;">
   </a>
   <div class="nav-links">
     <a href="story.html">About VAFB</a>
     <a href="products.html">Services</a>
     <a href="contact.html">Contact</a>
 
-    <!-- AVATAR USER HIỆN KHI ĐĂNG NHẬP / ĐĂNG KÝ XONG (KẾ BÊN CONTACT) -->
     <div class="nav-user-badge" id="navUserBadge" style="display:none;" onclick="location.href='contact.html'">
       <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="User Profile" class="nav-avatar-img" id="navAvatarImg">
       <span class="nav-user-name" id="navUserName">Enterprise</span>
@@ -38,24 +36,21 @@
   <a href="contact.html">Contact</a>
 </div>
 
-<!-- ═══ MODAL ĐĂNG KÝ / ĐĂNG NHẬP (POPUP CHO KHÁCH & DOANH NGHIỆP) ═══ -->
+<!-- ═══ MODAL ĐĂNG KÝ / ĐĂNG NHẬP ═══ -->
 <div class="auth-modal-overlay" id="authModal">
   <div class="auth-modal-card">
     <button class="auth-close-btn" onclick="closeAuthModal()">✕</button>
     <div class="auth-header">
-      <!-- ĐÃ THAY LOGO SVG TRONG POPUP BẰNG THẺ IMG -->
-      <img src="ChatGPT Image 17_39_49 30 thg 7, 2026.png" alt="VAFB Logo" style="height: 45px; width: auto; margin: 0 auto 12px; display: block; object-fit: contain;">
+      <img src="ChatGPT Image 17_39_49 30 thg 7, 2026.png" alt="VAFB Logo" style="height: 60px; width: auto; margin: 0 auto 12px; display: block; object-fit: contain;">
       <h2>Welcome to VAFB Portal</h2>
       <p>Select your organization type or profile to customize your experience.</p>
     </div>
 
-    <!-- Tabs chuyển Đăng nhập / Đăng ký -->
     <div class="auth-tabs">
       <button class="auth-tab active" id="tabLoginBtn" onclick="switchAuthTab('login')">Sign In</button>
       <button class="auth-tab" id="tabRegisterBtn" onclick="switchAuthTab('register')">Register</button>
     </div>
 
-    <!-- Form -->
     <form id="authForm" onsubmit="handleAuthSubmit(event)">
       <div class="auth-group">
         <label>Enterprise / Account Type *</label>
@@ -116,10 +111,8 @@
 <section class="introduce-sec has-stars feather-overlay-home">
   <div class="ctr">
     
-    <!-- HEADER LOGO VAFB TO & CĂN GIỮA NỔI BẬT -->
     <div class="brand-intro-header rv" style="text-align: center;">
-      <!-- ĐÃ THAY LOGO SVG LỚN BẰNG THẺ IMG -->
-      <img src="ChatGPT Image 17_39_49 30 thg 7, 2026.png" alt="VAFB Logo Large" style="height: 90px; width: auto; margin: 0 auto 15px; display: block; object-fit: contain;">
+      <img src="ChatGPT Image 17_39_49 30 thg 7, 2026.png" alt="VAFB Logo Large" style="height: 110px; width: auto; margin: 0 auto 15px; display: block; object-fit: contain;">
       <h1 class="brand-full-name">VIETNAM ASSOCIATION OF FASHION &amp; BEAUTY</h1>
     </div>
 
@@ -130,7 +123,6 @@
       empowering local fashion brands, cosmetic enterprises, designers, and manufacturers to grow sustainably together.
     </p>
 
-    <!-- Nút Learn More to nổi bật -->
     <a href="story.html" class="cta-learn-more-btn rv d2">
       Learn More About VAFB <span class="arr">→</span>
     </a>
