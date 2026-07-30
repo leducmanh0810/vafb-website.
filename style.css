@@ -6,7 +6,7 @@
   --cream2: #ece0ba;
   --purple: #3d1a5e;
   --purple2: #4e2272;
-  --nav-h: 64px;
+  --nav-h: 80px; /* Đã tăng chiều cao Navbar lên 80px để logo to hiển thị đẹp mắt */
   --f: 'Montserrat', sans-serif;
 }
 
@@ -48,7 +48,7 @@ button { font-family: var(--f); cursor: pointer; }
 }
 
 /* ═══════════════════════════════
-   NAVBAR
+   NAVBAR & LOGO RESIZING
 ═══════════════════════════════ */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 300;
@@ -58,7 +58,19 @@ button { font-family: var(--f); cursor: pointer; }
 }
 .navbar.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,.4); }
 .nav-logo { display: flex; align-items: center; }
-.vafb-logo-svg { height: 46px; width: auto; display: block; }
+
+/* TĂNG KÍCH THƯỚC LOGO TẠI ĐÂY */
+.nav-logo img, .vafb-logo-svg { 
+  height: 68px !important; /* Đã tăng kích thước logo to rõ nét hơn */
+  width: auto; 
+  display: block; 
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.nav-logo img:hover {
+  transform: scale(1.03); /* Hiệu ứng phóng nhẹ khi di chuột */
+}
+
 .nav-links { display: flex; align-items: center; gap: 32px; }
 .nav-links a { color: rgba(255,255,255,.75); font-weight: 600; font-size: 13px; transition: color .2s; }
 .nav-links a:hover, .nav-links a.active { color: #fff; }
@@ -216,7 +228,7 @@ button { font-family: var(--f); cursor: pointer; }
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; margin: 0 auto 24px; padding: 10px 0; width: 100%;
 }
-.vafb-logo-svg-large { height: 64px !important; width: auto; margin-bottom: 12px; }
+.vafb-logo-svg-large { height: 80px !important; width: auto; margin-bottom: 12px; }
 .brand-full-name {
   font-size: clamp(18px, 3.2vw, 32px) !important; font-weight: 900 !important;
   color: var(--purple); letter-spacing: 2px !important; text-align: center; line-height: 1.3;
@@ -490,13 +502,14 @@ button { font-family: var(--f); cursor: pointer; }
 }
 
 @media (max-width: 600px) {
-  :root { --nav-h: 56px; }
+  :root { --nav-h: 68px; } /* Điều chỉnh Navbar trên điện thoại */
   
-  /* Navbar Fixes */
+  /* Navbar & Logo Mobile Fixes */
   .navbar { padding: 0 16px; }
+  .nav-logo img, .vafb-logo-svg { height: 50px !important; } /* Tối ưu kích thước logo gọn gàng trên mobile */
   .nav-links { display: none; }
   .burger { display: flex; }
-  .nav-user-name { display: none; } /* Chỉ hiện Avatar trên màn hình cực nhỏ */
+  .nav-user-name { display: none; }
   .nav-user-badge { padding: 4px; border-radius: 50%; }
   
   /* Layout Padding Guard */
@@ -508,7 +521,7 @@ button { font-family: var(--f); cursor: pointer; }
   .btn-vafb-gold, .btn-vafb-glass { width: 100%; }
   
   /* Typography Scale Fixes */
-  .vafb-logo-svg-large { height: 48px !important; }
+  .vafb-logo-svg-large { height: 58px !important; }
   .brand-full-name { font-size: 16px !important; letter-spacing: 1px !important; }
   .hero-vafb-title { font-size: 24px; }
   
