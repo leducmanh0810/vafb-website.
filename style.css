@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap');
 
-/* ─── COLOR PALETTE VARIABLES ─── */
+/* ─── COLOR PALETTE VARIABLES (TỶ LỆ 50% ĐỎ - 30% TRẮNG - 10% BEIGE - 10% ĐEN) ─── */
 :root {
-  /* Tông Đỏ Garnet Burgundy */
+  /* Tông Đỏ Garnet Burgundy (50% diện tích) */
   --red-main: #7A0F18;      
   --red-dark: #5C0B12;      
   --red-bright: #9E1B27;    
 
-  /* Trắng Pearl White sạch sẽ */
+  /* Trắng Pearl White sạch sẽ (30%) */
   --white-pearl: #FFFFFF;   
   --white-bg: #FFF8E1;
 
-  /* Beige Champagne chỉ dùng viền tinh tế */
+  /* Beige Champagne (10% - Viền tinh tế, Badge, Highlight) */
   --beige-champagne: #FFE9B3;
 
-  /* Elegant Black cho chữ & Navbar */
+  /* Elegant Black (10% - Navbar, Footer, Lớp phủ) */
   --black-elegant: #0D0D0D;
 
   --nav-h: 120px;
@@ -59,7 +59,7 @@ button { font-family: var(--f); cursor: pointer; }
 }
 
 /* ═══════════════════════════════
-   NAVBAR
+   NAVBAR (HIỂN THỊ LOGO TRẮNG TINH TƯƠM)
 ═══════════════════════════════ */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 300;
@@ -71,11 +71,13 @@ button { font-family: var(--f); cursor: pointer; }
 .navbar.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,.8); }
 .nav-logo { display: flex; align-items: center; }
 
+/* ĐẶC BIỆT: CHUYỂN NÉT LOGO ĐEN THÀNH TRẮNG TINH */
 .nav-logo img, .vafb-logo-svg { 
   height: 110px !important; 
   width: auto !important; 
   display: block; 
   object-fit: contain;
+  filter: brightness(0) invert(1) !important; /* Biến nét đen thành nét trắng nổi bật */
   transition: transform 0.3s ease;
 }
 .nav-logo img:hover { transform: scale(1.03); }
@@ -175,7 +177,12 @@ button { font-family: var(--f); cursor: pointer; }
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; margin: 0 auto 24px; padding: 10px 0; width: 100%;
 }
-.vafb-logo-svg-large { height: 110px !important; width: auto; margin-bottom: 12px; }
+.vafb-logo-svg-large { 
+  height: 110px !important; 
+  width: auto; 
+  margin-bottom: 12px; 
+  filter: brightness(0) invert(1) !important;
+}
 .brand-full-name {
   font-size: clamp(18px, 3.2vw, 32px) !important; font-weight: 900 !important;
   color: var(--white-pearl); letter-spacing: 2px !important; text-align: center; line-height: 1.3;
@@ -220,14 +227,14 @@ button { font-family: var(--f); cursor: pointer; }
 .showcase-card-text { font-size: 22px; font-weight: 800; color: var(--white-pearl); font-family: 'Montserrat', sans-serif; letter-spacing: 1px; position: relative; z-index: 2; }
 
 /* ═══════════════════════════════
-   SỬA TOÀN BỘ CARD DỊCH VỤ THÀNH NỀN TRẮNG - CHỮ ĐEN/ĐỎ SẮC NÉT
+   CARD DỊCH VỤ NỀN TRẮNG PEARL - CHỮ ĐEN & ĐỎ SẮC NÉT
 ═══════════════════════════════ */
 .dark-sec { background: var(--red-dark); position: relative; }
 .dark-inner { position: relative; z-index: 3; padding-top: 40px; padding-bottom: 16px; }
 .sec-title-cream { font-size: clamp(26px,5vw,52px); font-weight: 800; color: var(--white-pearl); text-align: center; margin-bottom: 24px; letter-spacing: -0.5px; }
 .pgrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 20px; }
 
-/* Thẻ Card Nền Trắng Tinh Tế */
+/* Thẻ Card Nền Trắng Sáng Tinh Tế */
 .pcard { 
   background: var(--white-pearl) !important; 
   border: 1.5px solid var(--beige-champagne) !important;
@@ -238,7 +245,7 @@ button { font-family: var(--f); cursor: pointer; }
 .pcard-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s; }
 .pcard:hover .pcard-img img { transform: scale(1.08); }
 
-/* Chữ trong Card màu Đỏ Thẫm & Đen Rõ Nét */
+/* Chữ trong Card màu Đen & Đỏ Rõ Nét */
 .pcard-body { padding: 12px 14px 16px; background: var(--white-pearl) !important; }
 .ctag { display: inline-block; background: var(--red-main); color: var(--white-pearl); font-size: 9px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 6px; }
 .pname { font-size: 13px; font-weight: 800; color: var(--black-elegant) !important; margin-bottom: 4px; line-height: 1.4; }
@@ -248,7 +255,7 @@ button { font-family: var(--f); cursor: pointer; }
 .more-row a { font-size: 13px; font-weight: 700; color: var(--beige-champagne); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ═══════════════════════════════
-   SỬA KHỐI FAQ THÀNH NỀN TRẮNG - CHỮ ĐEN
+   KHỐI FAQ NỀN TRẮNG PEARL - CHỮ ĐEN DỄ ĐỌC
 ═══════════════════════════════ */
 .faq-sec { background: var(--red-main); padding: 56px 0 60px; }
 .faq-title { font-size: clamp(18px,3vw,30px); font-weight: 800; text-align: center; text-transform: uppercase; color: var(--white-pearl); margin-bottom: 32px; }
@@ -270,7 +277,7 @@ button { font-family: var(--f); cursor: pointer; }
 .fq-ico { margin-left: auto; font-size: 18px; font-weight: 600; color: var(--red-main); }
 .faq-btn.open .fq-ico { color: var(--beige-champagne); }
 
-/* Câu trả lời FAQ Trắng - Chữ Đen Dễ Đọc */
+/* Câu trả lời FAQ Trắng - Chữ Đen Rõ Ràng */
 .faq-ans { 
   max-height: 0; overflow: hidden; 
   background: var(--white-pearl) !important; 
@@ -280,7 +287,7 @@ button { font-family: var(--f); cursor: pointer; }
 .faq-ans.open { max-height: 320px; padding: 14px 20px 18px; border-top: 1px solid rgba(0,0,0,0.08); }
 
 /* ═══════════════════════════════
-   SỬA KHỐI FORM CONTACT THÀNH TRẮNG - CHỮ ĐEN
+   FORM CONTACT TRẮNG SÁNG - CHỮ ĐEN NỔI BẬT
 ═══════════════════════════════ */
 .contact-page { padding-top: var(--nav-h); background: var(--red-main); min-height: 100vh; }
 .contact-inner { padding: 48px 0 60px; }
@@ -288,7 +295,7 @@ button { font-family: var(--f); cursor: pointer; }
 .contact-co { font-weight: 800; font-size: 14px; color: var(--beige-champagne); margin-bottom: 12px; }
 .contact-details p { font-size: 13px; line-height: 2; color: var(--white-pearl); opacity: .9; }
 
-/* Khối Form Nền Trắng Tinh */
+/* Khối Form Nền Trắng Tinh Tế */
 .cform { 
   background: var(--white-pearl) !important; 
   border: 2px solid var(--beige-champagne); 
