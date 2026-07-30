@@ -1,4 +1,5 @@
 'use strict';
+
 const GEMINI_KEY = 'AQ.Ab8RN6JNCNAUCQc3QYy4hD7SI8V6goEEslqNDAr2wdNlL8UmSQ';
 const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent';
 const SYSTEM_PROMPT = `You are VAFB Assistant, the official AI assistant of VAFB — Vietnam Association of Fashion & Beauty.
@@ -143,6 +144,14 @@ function initAuthModal() {
   }
 }
 
+/* [BỔ SUNG MỚI]: HÀM MỞ MODAL ĐĂNG NHẬP CHO NÚT BẤM CỦA NAVBAR */
+function openAuthModal() {
+  const modal = document.getElementById('authModal');
+  if (modal) {
+    modal.classList.add('show');
+  }
+}
+
 function closeAuthModal() {
   const modal = document.getElementById('authModal');
   if (modal) {
@@ -174,6 +183,10 @@ function handleAuthSubmit(e) {
 function _showUserAvatar(roleName) {
   const badges = document.querySelectorAll('.nav-user-badge');
   const nameEls = document.querySelectorAll('.nav-user-name');
+  const authBtns = document.querySelectorAll('.nav-auth-btn');
+
+  /* Ẩn nút Đăng nhập và Hiện Avatar khi đã đăng nhập */
+  authBtns.forEach(btn => btn.style.display = 'none');
   badges.forEach(b => b.style.display = 'flex');
   nameEls.forEach(el => el.textContent = roleName);
 }
@@ -198,7 +211,7 @@ function toggleHeroVideo() {
 function initAutoPlayVideo() {
   const video = document.getElementById('heroVideo');
   if (video) {
-    video.muted = true; // Bắt buộc muted mới Autoplay được trên mọi trình duyệt
+    video.muted = true;
     const playPromise = video.play();
     if (playPromise !== undefined) {
       playPromise.catch(error => {
