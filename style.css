@@ -3,8 +3,8 @@
 /* ─── COLOR PALETTE VARIABLES (TỶ LỆ 50% ĐỎ - 30% TRẮNG - 10% BEIGE - 10% ĐEN) ─── */
 :root {
   /* Tông Đỏ Garnet Burgundy (50% diện tích) */
-  --red-main: #7A0F18;     
-  --red-dark: #5C0B12;     
+  --red-main: #7A0F18;      
+  --red-dark: #5C0B12;      
   --red-bright: #9E1B27;    
 
   /* Trắng Pearl White sạch sẽ (30%) */
@@ -126,7 +126,7 @@ button { font-family: var(--f); cursor: pointer; }
 .nav-user-name { color: var(--red-main) !important; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; }
 
 /* Nút Burger (3 gạch) */
-.burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; cursor: pointer; }
+.burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; cursor: pointer; z-index: 301; }
 .burger span { display: block; width: 22px; height: 2px; background: var(--red-main) !important; border-radius: 2px; transition: transform .3s, opacity .3s; }
 .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .burger.open span:nth-child(2) { opacity: 0; }
@@ -500,13 +500,14 @@ button { font-family: var(--f); cursor: pointer; }
   .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 
-@media (max-width: 600px) {
+/* [TỐI ƯU]: Mở rộng breakpoint hỗ trợ cho tất cả dòng điện thoại (Tablet/Phone <= 768px) */
+@media (max-width: 768px) {
   :root { --nav-h: 80px; }
   
   .navbar { padding: 0 16px; background: var(--white-pearl) !important; }
   .nav-logo img, .vafb-logo-svg { height: 65px !important; }
-  .nav-links { display: none; }
-  .burger { display: flex; }
+  .nav-links { display: none; } /* Ẩn menu ngang desktop */
+  .burger { display: flex; }    /* Nút 3 gạch luôn hiển thị trên Mobile */
   .nav-user-name { display: none; }
   .nav-user-badge { padding: 4px; border-radius: 50%; }
   
